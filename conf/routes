@@ -5,6 +5,11 @@
 # An example controller showing a sample home page
 
 
+POST    /blogdelete/:id             controllers.BlogController.postBlogDelete(id:Integer)
+
+GET     /blogedit/:id               controllers.BlogController.getBlogEdit(id :Integer)
+POST    /blogedit/:id               controllers.BlogController.postBlogEdit(id :Integer)
+
 GET     /blogdisplay/:id            controllers.BlogController.getBlog(id :Integer)
 GET     /bloglist                   controllers.BlogController.getBlogList()
 

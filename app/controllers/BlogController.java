@@ -11,6 +11,7 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class BlogController extends Controller
+
 {
     private JPAApi db;
     private FormFactory formFactory;
@@ -67,8 +68,54 @@ public class BlogController extends Controller
 
         return ok(views.html.bloglist.render(blogs));
     }
+//New stuff for blogedit *******************
+    @Transactional
+    public Result getBlogEdit(int blogId)
+    {
+        TypedQuery<Blog> query = db.em().createQuery("SELECT b FROM Blog b WHERE blogId = :blogId", Blog.class);
+        query.setParameter("blogId", blogId);
+        Blog blog = query.getSingleResult();
+
+        return ok(views.html.blogedit.render(blog));
+    }
+
+    @Transactional
+    public Result postBlogEdit(int blogId)
+    {
+        TypedQuery<Blog> editQuery = db.em().createQuery("SELECT b FROM Blog b WHERE blogId = :blogId", Blog.class);
+        editQuery.setParameter("blogId", blogId);
+        Blog blog = editQuery.getSingleResult();
+
+        DynamicForm form = formFactory.form().bindFromRequest();
+
+        String blogName = form.get("blogname");
+        String blogDesc = form.get("blogdesc");
+        String blogBody = form.get("blogbody");
+
+        blog.setBlogName(blogName);
+        blog.setBlogDesc(blogDesc);
+        blog.setBlogBody(blogBody);
+
+//        db.em().persist(blog);
+
+        return ok("saved");
+    }
+
+    @Transactional
+    public Result postBlogDelete(int blogId)
+    {
+        TypedQuery<Blog> editQuery = db.em().createQuery("SELECT b FROM Blog b WHERE blogId = :blogId", Blog.class);
+        editQuery.setParameter("blogId", blogId);
+        Blog blog = editQuery.getSingleResult();
+        db.em().remove(blog);
+
+        return ok("DELETED");
 
 
+        //        db.em().persist(blog);
+
+
+    }
     //    @Transactional(readOnly=true)
     //    public Result getBlogSearch()
     //    {
