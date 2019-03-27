@@ -1,20 +1,14 @@
-# play-final-project-starter
+# Final Project - Wellness Site
 
-This is a starter application to get you going on your final project.
+## This project creates a website containing information on nutrition and wellness, e.g., food, exercise, emotions, etc.
 
-## Running
+## Features
 
-Run this using [sbt](http://www.scala-sbt.org/).  
+- Blog
+- Food Preparation Plans
+- Diet/Nutrition Plans (this may be in the 2nd release)
+- Podcasts
+- Videos
+- Member List
 
-```
-sbt run
-```
-
-And then go to http://localhost:9000 to see the running web application.
-
-## Controllers
-
-There is a controller already in place to make sure this mostly empty project works.
-
-- TestController.java:
 

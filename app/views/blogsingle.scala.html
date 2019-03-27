@@ -1,0 +1,30 @@
+@(blog : Blog)
+@doctype.render
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+        <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <title>Blog Page</title>
+
+    </head>
+    <body>
+        <br>
+        <h2>Rhonda's Blog</h2>
+        <br>
+
+        <h5>Title</h5>
+            <p>@blog.getBlogName</p>
+            <br>
+
+        <h5>Description</h5>
+            <p>@blog.getBlogDesc</p>
+        <br>
+
+        <h5>Blog</h5>
+            <p>@blog.getBlogBody</p>
+
+        </form>
+    </body>
+</html>

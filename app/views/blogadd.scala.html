@@ -1,0 +1,34 @@
+@doctype.render
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+        <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <title>Add Blog</title>
+
+    </head>
+    <body>
+        <form method="post" enctype="multipart/form-data">
+            @helper.CSRF.formField
+
+            <br>
+            <h2>Enter new Blog</h2> <br>
+
+            <label  class="badge badge-info" type="text">BlogName</label><br>
+            <textarea name="blogname" rows="1" cols="30"></textarea>
+            <br><br>
+
+            <label  class="badge badge-info" type="text">BlogDesc</label><br>
+            <textarea name="blogdesc" rows="2" cols="75"></textarea>
+            <br><br>
+
+            <label  class="badge badge-info" type="text">BlogBody</label><br>
+            <textarea name="blogbody" rows="8" cols="75"></textarea>
+            <br><br>
+
+            <input type="submit" value="Save">
+
+        </form>
+    </body>
+</html>

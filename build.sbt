@@ -1,4 +1,4 @@
-name := """final-project-starter"""
+name := """FinalProject-WellnessSite"""
 
 version := "1.0-SNAPSHOT"
 
