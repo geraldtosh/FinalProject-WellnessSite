@@ -1,0 +1,41 @@
+@(blog : Blog)
+@doctype.render
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+        <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <title>Edit Blog</title>
+    </head>
+
+    <body>
+        <h2><strong>Edit Blog </strong></h2><br>
+        <h5>Now Editing:  @blog.getBlogName</h5>
+
+        <form method="post" enctype="multipart/form-data">
+            @helper.CSRF.formField
+
+            <br>
+            <label  class="badge badge-info" type="text">Title</label><br>
+            <textarea name="blogname" rows="1" cols="40">@blog.getBlogName</textarea>
+            <br><br>
+
+            <label  class="badge badge-info" type="text">Description</label><br>
+            <textarea name="blogdesc" rows="2" cols="80">@blog.getBlogDesc</textarea>
+            <br><br>
+
+            <label  class="badge badge-info" type="text">Blog</label><br>
+            <textarea name="blogbody" rows="10" cols="80">@blog.getBlogBody</textarea>
+            <br><br>
+
+            <input type="submit" value="Save">
+
+            <input type="submit" value="Delete" formmethod="post" formaction="/blogdelete/@blog.getBlogId">
+
+        </form>
+    </body>
+
+</html>
+
