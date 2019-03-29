@@ -1,0 +1,37 @@
+@(diet : Diet)
+@doctype.render
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+        <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <title>Diet Plan Page</title>
+    </head>
+    <body>
+        <br>
+        <h2>Rhonda's Diet Plans</h2>
+        <br>
+
+        <img  src="/picture/@diet.getDietId" width="250px"><br><br>
+
+        <h4>Title</h4>
+
+        <textarea name="dietname" rows="2" cols="40">@diet.getDietName</textarea>
+        <br><br>
+
+        <h4>Description</h4>
+        <textarea name="dietdesc" rows="2" cols="80">@diet.getDietDesc</textarea>
+
+        <br><br>
+
+        <h4>Diet</h4>
+
+        <textarea name="dietbody" rows="10" cols="100">@diet.getDietBody</textarea>
+        <br><br>
+
+        <a class="btn btn-info" href="/dietlist">Return to List</a>
+        <a href="/dietlist">Diet List</a>
+
+    </body>
+</html>
