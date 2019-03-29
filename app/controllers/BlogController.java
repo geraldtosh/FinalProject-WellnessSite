@@ -1,4 +1,5 @@
 package controllers;
+
 import models.Blog;
 import play.data.DynamicForm;
 import play.data.FormFactory;
@@ -68,7 +69,7 @@ public class BlogController extends Controller
 
         return ok(views.html.bloglist.render(blogs));
     }
-//New stuff for blogedit *******************
+
     @Transactional
     public Result getBlogEdit(int blogId)
     {
@@ -96,8 +97,6 @@ public class BlogController extends Controller
         blog.setBlogDesc(blogDesc);
         blog.setBlogBody(blogBody);
 
-//        db.em().persist(blog);
-
         return ok("saved");
     }
 
@@ -110,33 +109,17 @@ public class BlogController extends Controller
         db.em().remove(blog);
 
         return ok("DELETED");
-
-
-        //        db.em().persist(blog);
-
-
     }
-    //    @Transactional(readOnly=true)
-    //    public Result getBlogSearch()
-    //    {
-    //        DynamicForm form = formFactory.form().bindFromRequest();
-    //        String blogname = form.get("blogname");
-    //        if(blogname == null)
-    //            {
-    //                blogname = "";
-    //            }
-    //
-    //        blogname = "%" + blogname + "%";
-    //        Logger.debug(blogname);
-    //
-    //        TypedQuery<Blog> searchQuery = db.em().createQuery("SELECT blogname, blogdesc, blogbody", Blog.class);
-    //
-    //            searchQuery.setParameter("blogname", blogname);
-    //
-    //        return ok(views.html.blogsearch.render());
-    //
-    //
-    //    }
+
+    @Transactional
+    public Result getBlogPicture(int blogId)
+    {
+        TypedQuery<Blog> query = db.em().createQuery("SELECT b FROM Blog b WHERE blogId = :blogId", Blog.class);
+        query.setParameter("blogId", blogId);
+        Blog blog = query.getSingleResult();
+
+        return ok(blog.getPicture());
+    }
 }
 
 

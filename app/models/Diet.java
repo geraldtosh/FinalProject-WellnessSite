@@ -10,31 +10,31 @@ public class Diet
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int prepId;
+    private int PrepId;
     private byte[] picture;
 
-    private String prepName;
-    private String prepDesc;
-    private String prepBody;
+    private String PrepName;
+    private String PrepDesc;
+    private String PrepBody;
 
     public int getPrepId()
     {
-        return prepId;
+        return PrepId;
     }
 
     public String getDietName()
     {
-        return prepName;
+        return PrepName;
     }
 
     public String getDietDesc()
     {
-        return prepDesc;
+        return PrepDesc;
     }
 
     public String getDietBody()
     {
-        return prepBody;
+        return PrepBody;
     }
 
     public byte[] getPicture()
@@ -42,19 +42,19 @@ public class Diet
         return picture;
     }
 
-    public void setDietName(String prepName)
+    public void setDietName(String PrepName)
     {
-       prepName = prepName;
+       this.PrepName = PrepName;
     }
 
-    public void setDietDesc(String prepDesc)
+    public void setDietDesc(String PrepDesc)
     {
-        prepDesc = prepDesc;
+        this.PrepDesc = PrepDesc;
     }
 
-    public void setDietBody(String prepBody)
+    public void setDietBody(String PrepBody)
     {
-        prepBody = prepBody;
+        this.PrepBody = PrepBody;
     }
 
     public void setPicture(byte[] picture)

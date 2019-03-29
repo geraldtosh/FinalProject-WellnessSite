@@ -16,6 +16,13 @@
         <form method="post" enctype="multipart/form-data">
             @helper.CSRF.formField
 
+            <img  src="/dietpicture/@diet.getPrepId" width="250px"><br><br>
+
+            <br>
+            <label  class="badge badge-info" >Picture</label><br>
+            <textarea name="picture" rows="1" cols="40">@diet.getPicture</textarea>
+            <br><br>
+
             <br>
             <label  class="badge badge-info" >Title</label><br>
             <textarea name="prepname" rows="1" cols="40">@diet.getDietName</textarea>

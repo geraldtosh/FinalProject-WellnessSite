@@ -1,5 +1,7 @@
 package models;
 
+import play.mvc.Result;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +13,7 @@ public class Blog
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int BlogId;
+    private byte[] picture;
 
     private String BlogName;
     private String BlogDesc;
@@ -36,6 +39,11 @@ public class Blog
         return BlogBody;
     }
 
+    public byte[] getPicture()
+    {
+        return picture;
+    }
+
     public void setBlogName(String blogName)
     {
         BlogName = blogName;
@@ -49,5 +57,10 @@ public class Blog
     public void setBlogBody(String blogBody)
     {
         BlogBody = blogBody;
+    }
+
+    public void setPicture(byte[] picture)
+    {
+        this.picture = picture;
     }
 }

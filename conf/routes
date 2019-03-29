@@ -5,6 +5,10 @@
 # An example controller showing a sample home page
 
 
+GET     /homepage                   controllers.HomePageController.getHomePage
+
+GET     /blogpicture/:id            controllers.BlogController.getBlogPicture(id:Integer)
+
 POST    /blogdelete/:id             controllers.BlogController.postBlogDelete(id:Integer)
 
 GET     /blogedit/:id               controllers.BlogController.getBlogEdit(id :Integer)
@@ -15,6 +19,21 @@ GET     /bloglist                   controllers.BlogController.getBlogList()
 
 GET     /blogadd                    controllers.BlogController.getBlogAdd()
 POST    /blogadd                    controllers.BlogController.postBlogAdd()
+
+
+
+GET     /dietpicture/:id            controllers.DietController.getPicture(id:Integer)
+
+POST    /dietdelete/:id             controllers.DietController.postDietDelete(id:Integer)
+
+GET     /dietedit/:id               controllers.DietController.getDietEdit(id :Integer)
+POST    /dietedit/:id               controllers.DietController.postDietEdit(id :Integer)
+
+GET     /dietdisplay/:id            controllers.DietController.getDiet(id :Integer)
+GET     /dietlist                   controllers.DietController.getDietList()
+
+GET     /dietadd                    controllers.DietController.getDietAdd()
+POST    /dietadd                    controllers.DietController.postDietAdd()
 
 
 

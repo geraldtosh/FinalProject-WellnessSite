@@ -13,16 +13,25 @@
         <h2>Rhonda's Blog</h2>
         <br>
 
-        <h5>Title</h5>
-        <p>@blog.getBlogName</p>
-        <br>
+        <img  src="/blogpicture/@blog.getBlogId" width="250px"><br><br>
 
-        <h5>Description</h5>
-        <p>@blog.getBlogDesc</p>
-        <br>
+        <h4>Title</h4>
 
-        <h5>Blog</h5>
-        <p>@blog.getBlogBody</p>
+        <textarea name="blogdesc" rows="2" cols="40">@blog.getBlogName</textarea>
+        <br><br>
+
+        <h4>Description</h4>
+        <textarea name="blogdesc" rows="2" cols="80">@blog.getBlogDesc</textarea>
+
+        <br><br>
+
+        <h4>Blog</h4>
+
+        <textarea name="blogdesc" rows="10" cols="100">@blog.getBlogBody</textarea>
+        <br><br>
+
+        <a class="btn btn-info" href="/bloglist">Return to List</a>
+        <a href="/blogdlist">Blog List</a>
 
     </body>
 </html>

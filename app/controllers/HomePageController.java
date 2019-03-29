@@ -2,6 +2,8 @@ package controllers;
 import play.data.FormFactory;
 import play.db.jpa.JPAApi;
 import play.mvc.Controller;
+import play.mvc.Result;
+
 import javax.inject.Inject;
 
 public class HomePageController extends Controller
@@ -15,11 +17,12 @@ public class HomePageController extends Controller
         this.db = db;
         this.formFactory = formFactory;
     }
+
+    public Result getHomePage()
+    {
+        return ok(views.html.homepage.render());
+    }
 }
-
-
-
-
 
 
 

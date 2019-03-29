@@ -69,20 +69,20 @@ public class DietController extends Controller
     }
 
     @Transactional
-    public Result getDietEdit(int dietId)
+    public Result getDietEdit(int prepId)
     {
         TypedQuery<Diet> query = db.em().createQuery("SELECT d FROM Diet d WHERE prepId = :prepId", Diet.class);
-        query.setParameter("prepId", dietId);
+        query.setParameter("prepId", prepId);
         Diet diet = query.getSingleResult();
 
         return ok(views.html.dietedit.render(diet));
     }
 
     @Transactional
-    public Result postDietEdit(int dietId)
+    public Result postDietEdit(int prepId)
     {
         TypedQuery<Diet> editQuery = db.em().createQuery("SELECT d FROM Diet d WHERE prepId = :prepId",Diet.class);
-        editQuery.setParameter("prepId", dietId);
+        editQuery.setParameter("prepId", prepId);
         Diet diet = editQuery.getSingleResult();
 
         DynamicForm form = formFactory.form().bindFromRequest();
@@ -110,10 +110,10 @@ public class DietController extends Controller
     }
 
     @Transactional
-    public Result getPicture(int pictureId)
+    public Result getPicture(int prepId)
     {
         TypedQuery<Diet> query = db.em().createQuery("SELECT d FROM Diet d WHERE prepId = :prepId", Diet.class);
-        query.setParameter("pictureId", pictureId);
+        query.setParameter("prepId", prepId);
         Diet diet = query.getSingleResult();
 
         return ok(diet.getPicture());
