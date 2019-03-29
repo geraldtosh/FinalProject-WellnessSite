@@ -1,0 +1,29 @@
+@(diets : List[Diet])
+@doctype.render
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+        <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <title>Home Page</title>
+    </head>
+    <body>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Diet Name</th>
+                    <th scope="col">Diet Desc</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for( diet <- diets){
+                <tr>
+                    <td><a href="/dietdisplay/@diet.getPrepId">@diet.getDietName</a></td>
+                    <td>@diet.getDietDesc</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </body>
+</html>
