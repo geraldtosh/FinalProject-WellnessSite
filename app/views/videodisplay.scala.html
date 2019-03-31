@@ -1,0 +1,31 @@
+@(video : Video)
+@doctype.render
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+        <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <title>Videos</title>
+    </head>
+    <body>
+        <br>
+        <h2>Check Out One of Rhonda's Videos</h2>
+        <br>
+
+        <h4>Videos</h4>
+        <textarea name="videoname" rows="2" cols="40">@video.getVideoName</textarea>
+        <br><br>
+
+        <h4>Description</h4>
+        <textarea name="videodesc" rows="2" cols="80">@video.getVideoDesc</textarea>
+        <br><br>
+
+        <h4>Video</h4>
+        <textarea name="videobody" rows="10" cols="100">@video.getVideoFile</textarea>
+        <br><br>
+
+        <a class="btn btn-info" href="/bloglist">Return to List</a>
+        <a href="/videolist">Video List</a>
+    </body>
+</html>
