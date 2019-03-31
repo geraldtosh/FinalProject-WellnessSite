@@ -7,6 +7,8 @@
 
 GET     /homepage                   controllers.HomePageController.getHomePage
 
+
+
 GET     /blogpicture/:id            controllers.BlogController.getBlogPicture(id:Integer)
 
 POST    /blogdelete/:id             controllers.BlogController.postBlogDelete(id:Integer)
@@ -30,12 +32,19 @@ GET     /dietedit/:id               controllers.DietController.getDietEdit(id :I
 POST    /dietedit/:id               controllers.DietController.postDietEdit(id :Integer)
 
 GET     /dietdisplay/:id            controllers.DietController.getDiet(id :Integer)
+
 GET     /dietlist                   controllers.DietController.getDietList()
 
 GET     /dietadd                    controllers.DietController.getDietAdd()
 POST    /dietadd                    controllers.DietController.postDietAdd()
 
+GET     /podcastlisten/:id          controllers.HomePageController.getPodcast(id:Integer)
 
+GET     /video/:id                  controllers.HomePageController.getVideo(id:Integer)
+
+GET     /videolist                  controllers.HomePageController.getVideoList()
+
+GET     /videodisplay/:id           controllers.HomePageController.getVideo(id:Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
