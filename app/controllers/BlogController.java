@@ -97,7 +97,7 @@ public class BlogController extends Controller
         blog.setBlogDesc(blogDesc);
         blog.setBlogBody(blogBody);
 
-        return ok("saved");
+        return ok(views.html.blogdisplay.render(blog));
     }
 
     @Transactional
