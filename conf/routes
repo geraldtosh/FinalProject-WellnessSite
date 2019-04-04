@@ -46,5 +46,8 @@ GET     /videolist                  controllers.HomePageController.getVideoList(
 
 GET     /videodisplay/:id           controllers.HomePageController.getVideo(id:Integer)
 
+GET     /podcastlist                controllers.HomePageController.getPodcastList()
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
