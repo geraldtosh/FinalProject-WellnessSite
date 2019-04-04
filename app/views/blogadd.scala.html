@@ -1,4 +1,5 @@
 @doctype.render
+@navbar.render
 
 <html lang="en">
     <head>
@@ -8,26 +9,39 @@
         <title>Add Blog</title>
 
     </head>
-    <body>
-        <h2><strong>Add Blog</strong></h2><br>
+    <body class="bg-light">
+        <div class="container">
+            <br>
+            <h2 class="text-info"><strong>Add Blog</strong></h2><br>
 
-        <form method="post" enctype="multipart/form-data">
-            @helper.CSRF.formField
+            <form method="post" enctype="multipart/form-data">
+                @helper.CSRF.formField
 
-            <label  class="badge badge-info" type="text">Title</label><br>
-            <textarea name="blogname" rows="1" cols="30"></textarea>
-            <br><br>
+                <label  class="text-info" type="text"><B>Title</B></label><br>
+                <textarea name="blogname" rows="1" cols="30"></textarea>
+                <br><br>
 
-            <label  class="badge badge-info" type="text">Description</label><br>
-            <textarea name="blogdesc" rows="2" cols="80"></textarea>
-            <br><br>
+                <label  class="text-info" type="text"><B>Description</B></label><br>
+                <textarea name="blogdesc" rows="2" cols="80"></textarea>
+                <br><br>
 
-            <label  class="badge badge-info" type="text">Blog</label><br>
-            <textarea name="blogbody" rows="8" cols="80"></textarea>
-            <br><br>
-
-            <input type="submit" value="Save">
-
-        </form>
+                <label  class="text-info" type=text"><B>Blog</B></label><br>
+                <textarea name="blogbody" rows="8" cols="80"></textarea>
+                <br><br>
+                <table>
+                    <tr>
+                        <td>
+                            <input class="btn bg-info btn-sm mr-3 text-white" type="submit" value="Save">
+                        </td>
+                        <td>
+                            <a class="btn  bg-info btn-sm mr-3 text-white" href="/bloglist">Back to Blogs</a>
+                        </td>
+                        <td>
+                            <a class="btn  bg-info btn-sm text-white" href="/homepage mr-3">Homepage</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </body>
 </html>
