@@ -1,30 +1,46 @@
 @(blogs: List[Blog])
 @doctype.render
+@navbar.render
 
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
         <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
-        <title>Home Page</title>
+        <title>Blogs</title>
     </head>
-    <body>
+    <body class="bg-light">
+        <div class="container">
+            <br>
+        <h1 class="text-info">Blogs</h1><br>
+
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Blog Name</th>
-                    <th scope="col">Blog Desc</th>
+                    <th scope="col" class="text-white bg-info">Title</th>
+                    <th scope="col" class="text-white bg-info" >Description</th>
+                    <th scope="col" class="text-white bg-info" >Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @for( blog <-blogs){
                 <tr>
-                    <td><a href="/blogdisplay/@blog.getBlogId">@blog.getBlogName</a></td>
+                    <!--<td><label  class="text-dark" type="text"><B>Description</B></label><br>-->
+                    <!--<td><a href="/blogdisplay/@blog.getBlogId" class="text-dark"><i>@blog.getBlogName</i></a></td>-->
+                    <td>@blog.getBlogName</td>
                     <td>@blog.getBlogDesc</td>
+
+                    <td>
+                        <a href="/blogdisplay/@blog.getBlogId" class="text-dark"><u>View</u></a>
+                        <a href="/blogedit/@blog.getBlogId" class="text-dark ml-3"><u>Edit/Delete</u></a>
+                    </td>
                 </tr>
                 }
             </tbody>
-        </table>
+        </table><br>
+            <a class="btn  bg-info btn-sm text-white" href="/blogadd">Add Blog</a>
+            <a class="btn  bg-info btn-sm text-white mr-3" href="/homepage">Homepage</a>
+        </div>
     </body>
 </html>
 
