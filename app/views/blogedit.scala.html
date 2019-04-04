@@ -2,6 +2,7 @@
 @doctype.render
 
 <html lang="en">
+@navbar.render
 
     <head>
         <meta charset="UTF-8">
@@ -10,30 +11,45 @@
         <title>Edit Blog</title>
     </head>
 
-    <body>
-        <h2><strong>Edit Blog</strong></h2><br>
-        <h5>Now Editing:  @blog.getBlogName</h5>
-
-        <form method="post" enctype="multipart/form-data">
-            @helper.CSRF.formField
-
+    <body class="bg-light">
+        <div class="container">
             <br>
-            <label  class="badge badge-info" type="text">Title</label><br>
-            <textarea name="blogname" rows="1" cols="40">@blog.getBlogName</textarea>
-            <br><br>
+        <h2 class="text-info"><strong>Edit Blog</strong></h2><br>
 
-            <label  class="badge badge-info" type="text">Description</label><br>
-            <textarea name="blogdesc" rows="2" cols="80">@blog.getBlogDesc</textarea>
-            <br><br>
+            <form method="post" enctype="multipart/form-data">
+                @helper.CSRF.formField
 
-            <label  class="badge badge-info" type="text">Diet</label><br>
-            <textarea name="blogbody" rows="10" cols="80">@blog.getBlogBody</textarea>
-            <br><br>
+                <label  class="text-info" type="text"><B>Title</B></label><br>
+                <textarea name="blogname" rows="1" cols="40">@blog.getBlogName</textarea>
+                <br><br>
 
-            <input type="submit" value="Save">
+                <label  class="text-info" type="text"><B>Description</B></label><br>
+                <textarea name="blogdesc" rows="2" cols="80">@blog.getBlogDesc</textarea>
+                <br><br>
 
-            <input type="submit" value="Delete" formmethod="post" formaction="/blogdelete/@blog.getBlogId">
-        </form>
+                <label  class="text-info" type="text"><B>Diet</B></label><br>
+                <textarea name="blogbody" rows="10" cols="80">@blog.getBlogBody</textarea>
+                <br>
+
+                <table>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Save" class="btn bg-info btn-sm mr-3 text-white" >
+                        </td>
+                        <td>
+                            <input type="submit" value="Delete" class="btn bg-info btn-sm mr-3 text-white" formmethod="post" formaction="/blogdelete/@blog.getBlogId">
+
+                        </td>
+                        <td>
+                            <a class="btn bg-info btn-sm mr-3 text-white" href="/bloglist">Back to Blogs</a>
+                        </td>
+                        <td>
+                            <a class="btn bg-info btn-sm text-white" href="/homepage">Homepage</a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </body>
 
 </html>
