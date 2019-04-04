@@ -1,5 +1,6 @@
 @(diet : Diet)
 @doctype.render
+@navbar.render
 
 <html lang="en">
     <head>
@@ -8,30 +9,29 @@
         <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
         <title>Diet Plan Page</title>
     </head>
-    <body>
-        <br>
-        <h2>Rhonda's Diet Plans</h2>
-        <br>
+    <body class="bg-light">
+        <div class="container">
+            <br>
+            <h2 class="text-info"><B>Meal Plans</B></h2>
+            <br>
 
-        <img  src="/dietpicture/@diet.getPrepId" width="250px"><br><br>
+            <img  src="/dietpicture/@diet.getPrepId" width="125px"><br><br>
 
-        <h4>Title</h4>
+            <h4 class="text-info"><B>Title</B></h4>
 
-        <textarea name="dietname" rows="2" cols="40">@diet.getDietName</textarea>
-        <br><br>
+            <textarea name="dietname"  rows="2" cols="40">@diet.getDietName</textarea>
+            <br><br>
 
-        <h4>Description</h4>
-        <textarea name="dietdesc" rows="2" cols="80">@diet.getDietDesc</textarea>
+            <h4 class="text-info"><B>Description</B></h4>
+            <textarea name="dietdesc" rows="2" cols="80">@diet.getDietDesc</textarea>
+            <br><br>
 
-        <br><br>
+            <h4 class="text-info"><B>Meal Preparation</B></h4>
+            <textarea name="dietbody" rows="10" cols="100">@diet.getDietBody</textarea>
+            <br><br>
 
-        <h4>Diet</h4>
-
-        <textarea name="dietbody" rows="10" cols="100">@diet.getDietBody</textarea>
-        <br><br>
-
-        <!--<a class="btn btn-info" href="/dietlist">Return to List</a>-->
-        <a href="/dietlist">Return to List</a>
-
+            <a class="btn bg-info btn-sm mr-3" href="/dietlist">Back to Meals</a>
+            <a class="btn bg-info btn-sm" href="/homepage">Homepage</a>
+        </div>
     </body>
 </html>
