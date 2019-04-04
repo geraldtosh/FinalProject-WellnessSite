@@ -1,0 +1,42 @@
+@(podcasts : List[Podcast])
+@doctype.render
+@navbar.render
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+        <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <title>Podcast List</title>
+    </head>
+    <body class="bg-light">
+        <div class="container">
+            <br>
+            <h1 class="text-info">Podcasts</h1>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-white bg-info">Podcast Name</th>
+                        <th scope="col" class="text-white bg-info">Podcast Desc</th>
+                        <th scope="col" class="text-white bg-info">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for( podcast <- podcasts){
+                    <tr>
+                        <!--<td><a href="/podcastlisten/@podcast.getPodcastId">@podcast.getPodcastName</a></td>-->
+                        <td>@podcast.getPodcastName</td>
+                        <td>@podcast.getPodcastDesc</td>
+                        <td>
+                            <a href="/podcastlisten/@podcast.getPodcastId"><u>View</u></a></td>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+
+            </table>
+            <a class="btn bg-info btn-sm text-white" href="/homepage">Homepage</a>
+        </div>
+    </body>
+</html>
