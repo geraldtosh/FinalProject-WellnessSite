@@ -1,5 +1,6 @@
 @(diet : Diet)
 @doctype.render
+@navbar.render
 
 <html lang="en">
     <head>
@@ -9,36 +10,39 @@
         <title>Edit Diet</title>
     </head>
 
-    <body>
-        <h2><strong>Edit Diet</strong></h2>
-        <!--<h5>Now Editing:  @diet.getDietName</h5>-->
-
-        <form method="post" enctype="multipart/form-data">
-            @helper.CSRF.formField
-
-            <img  src="/dietpicture/@diet.getPrepId" width="250px"><br><br>
-
+    <body class="bg-light">
+        <div class="container" >
             <br>
-            <label  class="badge badge-info" >Picture</label><br>
-            <textarea name="picture" rows="1" cols="40">@diet.getPicture</textarea>
-            <br><br>
+            <h2 class="text-info"><strong>Edit Meal Plan</strong></h2>
+            <!--<h5>Now Editing:  @diet.getDietName</h5>-->
+            <form method="post" enctype="multipart/form-data">
+                @helper.CSRF.formField
 
-            <br>
-            <label  class="badge badge-info" >Title</label><br>
-            <textarea name="prepname" rows="1" cols="40">@diet.getDietName</textarea>
-            <br><br>
+                <img  src="/dietpicture/@diet.getPrepId" width="175px"><br><br>
 
-            <label  class="badge badge-info" >Description</label><br>
-            <textarea name="prepdesc" rows="2" cols="80">@diet.getDietDesc</textarea>
-            <br><br>
+                <label  class="text-info"><B>Title</B></label><br>
+                <textarea name="prepname" rows="1" cols="40">@diet.getDietName</textarea>
+                <br><br>
 
-            <label  class="badge badge-info" >Diet Preparation Plan</label><br>
-            <textarea name="prepbody" rows="10" cols="80">@diet.getDietBody</textarea>
-            <br><br>
+                <label  class="text-info"><B>Description</B></label><br>
+                <textarea name="prepdesc" rows="2" cols="80">@diet.getDietDesc</textarea>
+                <br><br>
 
-            <input type="submit" value="Save">
-
-            <input type="submit" value="Delete" formmethod="post" formaction="/dietdelete/@diet.getPrepId">
-        </form>
+                <label  class="text-info"><B>Meal Preparation Plan</B></label><br>
+                <textarea name="prepbody" rows="10" cols="80">@diet.getDietBody</textarea>
+                <br>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Save" class="btn btn-sm mr-3 bg-info text-white" formmethod="post" formaction="/dietedit/@diet.getPrepId">
+                        </td>
+                        <td>
+                            <input type="submit" value="Delete" class="btn btn-sm bg-info text-white  mr-3" formmethod="post" formaction="/dietdelete/@diet.getPrepId">
+                        </td>
+                        <br>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </body>
 </html>
