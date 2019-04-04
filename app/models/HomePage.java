@@ -1,8 +1,5 @@
 package models;
 
-public class HomePage
+public class Homepage
 {
-
 }
-
-
