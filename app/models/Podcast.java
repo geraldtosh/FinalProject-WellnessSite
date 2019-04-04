@@ -8,15 +8,42 @@ public class Podcast
 {
     @Id
     private int podcastId;
-    private byte[] podcastFile;
+
+    private String podName;
+    private String podDesc;
+    private byte[] podFile;
 
     public int getPodcastId()
     {
         return podcastId;
     }
 
+    public String getPodcastName()
+    {
+        return podName;
+    }
+
+    public String getPodcastDesc()
+    {
+        return podDesc;
+    }
+
+    public byte[] getPodFile()
+    {
+        return podFile;
+    }
+
     public byte[] getPodcast()
     {
-        return podcastFile;
+        return podFile;
     }
+
+
+
+
+
+
+
+
+
 }
