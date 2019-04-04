@@ -1,5 +1,6 @@
 @(videos: List[Video])
 @doctype.render
+@navbar.render
 
 <html lang="en">
     <head>
@@ -8,23 +9,41 @@
         <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
         <title>Video Page</title>
     </head>
-    <body>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Video Name</th>
-                    <th scope="col">Video Desc</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for( video <-videos){
-                <tr>
-                    <td><a href="/videodisplay/@video.getVideoId">@video.getVideoName</a></td>
-                    <td>@video.getVideoDesc</td>
-                </tr>
-                }
-            </tbody>
-        </table>
+    <body class="bg-light">
+        <div class="container">
+            <br>
+            <h1 class="text-info">videocasts</h1>
+            <table class="table table-striped">
+                <thead>
+                    <br>
+                    <tr>
+                        <th scope="col" class="text-white bg-info mr-3">Video Name</th>
+                        <th scope="col" class="text-white bg-info">Video Desc</th>
+                        <th scope="col" class="text-white bg-info">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for( video <-videos){
+                    <tr>
+                        <td>
+                            <a href="/videodisplay/@video.getVideoId" class="text-dark"><u>@video.getVideoName</u></a>
+                        </td>
+                        <td>
+                            @video.getVideoDesc
+                        </td>
+                        <td>
+                            <a href="/videodisplay/@video/getVideoId" class="text-dark"><u>View</u></a>
+                        </td>
+                    </tr>
+                    }
+                <table>
+                    <br>
+                    <tr>
+                        <a class="btn  bg-info btn-sm text-white" href="/homepage">Homepage</a>
+                    </tr>
+                </table>
+            </table>
+        </div>
     </body>
 </html>
 
