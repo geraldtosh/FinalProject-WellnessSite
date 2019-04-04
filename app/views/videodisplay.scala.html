@@ -1,5 +1,6 @@
 @(video : Video)
 @doctype.render
+@navbar.render
 
 <html lang="en">
     <head>
@@ -25,7 +26,8 @@
         <textarea name="videobody" rows="10" cols="100">@video.getVideoFile</textarea>
         <br><br>
 
-        <a class="btn btn-info" href="/bloglist">Return to List</a>
-        <a href="/videolist">Video List</a>
-    </body>
+
+    </body><a class="btn btn-info" href="/videolist">Return to List</a>
+    <a href="/videolist">Video List</a>
+    <a href="/homepage">Homepage</a>
 </html>
