@@ -1,29 +1,47 @@
 @(diets : List[Diet])
 @doctype.render
+@navbar.render
 
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
         <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
-        <title>Home Page</title>
+        <title>Food Prep</title>
     </head>
-    <body>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Diet Name</th>
-                    <th scope="col">Diet Desc</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for( diet <- diets){
-                <tr>
-                    <td><a href="/dietdisplay/@diet.getPrepId">@diet.getDietName</a></td>
-                    <td>@diet.getDietDesc</td>
-                </tr>
-                }
-            </tbody>
-        </table>
+    <body class="bg-light">
+        <div class="container">
+        <br>
+        <h1 class="text-info">Meal Plans</h1><br>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-white bg-info mr-3">Title</th>
+                        <th scope="col" class="text-white bg-info">Description</th>
+                        <th scope="col" class="text-white bg-info">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for( diet <- diets){
+                    <tr>
+                        <td>@diet.getDietName</td>
+                        <td>@diet.getDietDesc</td>
+
+                        <td>
+                            <a href="/dietdisplay/@diet.getPrepId" class="text-dark"><u>View</u></a>
+                            <a href="/dietedit/@diet.getPrepId" class="text-dark ml-3"><u>Edit/Delete</u></a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+                <table>
+                    <br>
+                    <tr>
+                        <a class="btn  bg-info btn-sm text-white mr-3" href="/dietadd">Add Meal Plan</a>
+                        <a class="btn  bg-info btn-sm text-white" href="/homepage">Homepage</a>
+                    </tr>
+                </table>
+            </table>
+        </div>
     </body>
 </html>
