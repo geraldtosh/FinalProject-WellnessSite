@@ -10,30 +10,30 @@
         <title>Blog Page</title>
     </head>
     <body class="bg-light">
-        <div class="container">
+        <div class="container" >
             <br>
-            <h2 class="text-info"><b>Rhonda's Blog</b></h2>
+            <h2 class="text-secondary"><b>Rhonda's Blog</b></h2>
             <br>
 
             <img  src="/blogpicture/@blog.getBlogId" width="125px"><br><br>
 
-            <h4 class="text-info"><strong>Title</strong></h4>
+            <h4 class="text-secondary"><strong>Title</strong></h4>
 
-            <textarea name="blogdesc" rows="2" cols="40" >@blog.getBlogName</textarea>
+            <textarea name="blogdesc" rows="2" cols="40" class="border-secondary rounded" >@blog.getBlogName</textarea>
             <br><br>
 
-            <h4 class="text-info"><strong>Description</strong></h4>
-            <textarea name="blogdesc" rows="2" cols="80">@blog.getBlogDesc</textarea>
+            <h4 class="text-secondary"><strong>Description</strong></h4>
+            <textarea name="blogdesc" rows="2" cols="80" class="border-secondary rounded">@blog.getBlogDesc</textarea>
 
             <br><br>
 
-            <h4 class="text-info"><strong>Blog</strong></h4>
+            <h4 class="text-secondary" ><strong>Blog</strong></h4>
 
-            <textarea name="blogdesc" rows="10" cols="100">@blog.getBlogBody</textarea>
+            <textarea name="blogdesc" class="border-secondary rounded" rows="10" cols="100">@blog.getBlogBody</textarea>
             <br><br>
 
-            <a class="btn  bg-info btn-sm mr-3 text-white"  href="/bloglist">Back to Blogs</a>
-            <a class="btn  bg-info btn-sm text-white" href="/homepage">Homepage</a>
+            <a class="btn  bg-secondary text-white btn-sm mr-3 text-white"  href="/bloglist">Back to Blogs</a>
+            <a class="btn  bg-secondary text-white btn-sm text-white" href="/homepage">Homepage</a>
         </div>
     </body>
 </html>

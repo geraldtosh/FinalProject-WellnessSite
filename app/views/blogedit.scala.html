@@ -1,8 +1,8 @@
 @(blog : Blog)
 @doctype.render
+@navbar.render
 
 <html lang="en">
-@navbar.render
 
     <head>
         <meta charset="UTF-8">
@@ -13,44 +13,42 @@
 
     <body class="bg-light">
         <div class="container">
-            <br>
-        <h2 class="text-info"><strong>Edit Blog</strong></h2><br>
+        <br>
+        <h2 class="text-secondary"><strong>Edit Blog</strong></h2><br>
 
             <form method="post" enctype="multipart/form-data">
                 @helper.CSRF.formField
 
-                <label  class="text-info" type="text"><B>Title</B></label><br>
-                <textarea name="blogname" rows="1" cols="40">@blog.getBlogName</textarea>
+                <label  class="text-secondary" type="text"><B>Title</B></label><br>
+                <textarea name="blogname" class="border-secondary rounded" rows="1" cols="40">@blog.getBlogName</textarea>
                 <br><br>
 
-                <label  class="text-info" type="text"><B>Description</B></label><br>
-                <textarea name="blogdesc" rows="2" cols="80">@blog.getBlogDesc</textarea>
+                <label  class="text-secondary" type="text"><B>Description</B></label><br>
+                <textarea name="blogdesc" class="border-secondary rounded" rows="2" cols="80">@blog.getBlogDesc</textarea>
                 <br><br>
 
-                <label  class="text-info" type="text"><B>Diet</B></label><br>
-                <textarea name="blogbody" rows="10" cols="80">@blog.getBlogBody</textarea>
-                <br>
+                <label  class="text-secondary" type="text"><B>Blog</B></label><br>
+                <textarea name="blogbody" class="border-secondary rounded" rows="10" cols="80">@blog.getBlogBody</textarea>
+                <br><br>
 
                 <table>
                     <tr>
                         <td>
-                            <input type="submit" value="Save" class="btn bg-info btn-sm mr-3 text-white" >
+                            <input type="submit" value="Save" class="btn bg-secondary btn-sm mr-3 text-white">
                         </td>
                         <td>
-                            <input type="submit" value="Delete" class="btn bg-info btn-sm mr-3 text-white" formmethod="post" formaction="/blogdelete/@blog.getBlogId">
-
+                            <input type="submit" value="Delete" class="btn bg-secondary btn-sm mr-3 text-white" formmethod="post" formaction="/blogdelete/@blog.getBlogId">
                         </td>
                         <td>
-                            <a class="btn bg-info btn-sm mr-3 text-white" href="/bloglist">Back to Blogs</a>
+                            <a class="btn bg-secondary btn-sm mr-3 text-white" href="/bloglist">Back to Blogs</a>
                         </td>
                         <td>
-                            <a class="btn bg-info btn-sm text-white" href="/homepage">Homepage</a>
+                            <a class="btn bg-secondary btn-sm text-white" href="/homepage">Homepage</a>
                         </td>
                     </tr>
                 </table>
             </form>
         </div>
     </body>
-
 </html>
 

@@ -12,26 +12,26 @@
     <body class="bg-light">
         <div class="container">
             <br>
-            <h2 class="text-info"><B>Meal Plans</B></h2>
+            <h2 class="text-secondary"><B>Meal Plans</B></h2>
             <br>
 
             <img  src="/dietpicture/@diet.getPrepId" width="125px"><br><br>
 
-            <h4 class="text-info"><B>Title</B></h4>
+            <h4 class="text-secondary"><B>Title</B></h4>
 
-            <textarea name="dietname"  rows="2" cols="40">@diet.getDietName</textarea>
+            <textarea name="dietname"  class="border-secondary rounded" rows="2" cols="40">@diet.getDietName</textarea>
             <br><br>
 
-            <h4 class="text-info"><B>Description</B></h4>
-            <textarea name="dietdesc" rows="2" cols="80">@diet.getDietDesc</textarea>
+            <h4 class="text-secondary"><B>Description</B></h4>
+            <textarea name="dietdesc" class="border-secondary rounded" rows="2" cols="80">@diet.getDietDesc</textarea>
             <br><br>
 
-            <h4 class="text-info"><B>Meal Preparation</B></h4>
-            <textarea name="dietbody" rows="10" cols="100">@diet.getDietBody</textarea>
+            <h4 class="text-secondary"><B>Meal Preparation</B></h4>
+            <textarea name="dietbody" class="border-secondary rounded" rows="10" cols="100">@diet.getDietBody</textarea>
             <br><br>
 
-            <a class="btn bg-info btn-sm mr-3" href="/dietlist">Back to Meals</a>
-            <a class="btn bg-info btn-sm" href="/homepage">Homepage</a>
+            <a class="btn bg-secondary btn-sm mr-3 text-white" href="/dietlist">Back to Meals</a>
+            <a class="btn bg-secondary btn-sm text-white" href="/homepage">Homepage</a>
         </div>
     </body>
 </html>

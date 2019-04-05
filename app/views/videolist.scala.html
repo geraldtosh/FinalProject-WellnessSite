@@ -12,14 +12,14 @@
     <body class="bg-light">
         <div class="container">
             <br>
-            <h1 class="text-info">videocasts</h1>
+            <h1 class="text-secondary">videocasts</h1>
             <table class="table table-striped">
                 <thead>
                     <br>
                     <tr>
-                        <th scope="col" class="text-white bg-info mr-3">Video Name</th>
-                        <th scope="col" class="text-white bg-info">Video Desc</th>
-                        <th scope="col" class="text-white bg-info">Action</th>
+                        <th scope="col" class="text-white bg-secondary mr-3">Video Name</th>
+                        <th scope="col" class="text-white bg-secondary">Video Desc</th>
+                        <th scope="col" class="text-white bg-secondary">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,14 +32,14 @@
                             @video.getVideoDesc
                         </td>
                         <td>
-                            <a href="/videodisplay/@video/getVideoId" class="text-dark"><u>View</u></a>
+                            <a href="/videodisplay/@video.getVideoId" class="text-dark"><u>View</u></a>
                         </td>
                     </tr>
                     }
                 <table>
                     <br>
                     <tr>
-                        <a class="btn  bg-info btn-sm text-white" href="/homepage">Homepage</a>
+                        <a class="btn  bg-secondary btn-sm text-white" href="/homepage">Homepage</a>
                     </tr>
                 </table>
             </table>

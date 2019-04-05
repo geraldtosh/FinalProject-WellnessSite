@@ -1,62 +1,118 @@
+@(blog : Blog, diet : Diet, video : Video)
 @doctype.render
+@navbar.render
 
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/stylesheets/body.css">
         <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
         <title>Home Page</title>
     </head>
-    <body class="bg-light">
-
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-
-
-            <a class="navbar-brand" href="/homepage">Home</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/bloglist">Blogs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dietlist">Meal Plans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/videolist">Videocasts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/podcastlist">Podcasts</a>
-                    </li>
-                </ul>
+    <body>
+        <div class="container">
+            <div class="page-header"></div>
+            <h1 class="text-secondary"><strong></strong><center>Rhonda's Health & Wellness Site</center></h1></strong></h1><br>
             </div>
-        </nav>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <h4>Note to self: Put in Grid, Motion Banner</h4><br>
+        <!--PICTURES-->
+        <div class="row mb-4">
+            <div class="col-2">
+            </div>
+            <div class="col-4">
+                <img  src="/assets/images/rhondatvwithgirls.jpg" width="400px" height="250px">
+            </div>
+            <div class="col-4">
+                <img  src="/assets/images/rhondatvwithman.jpg" width="400px" height="250px">
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
 
-        <img  src="/assets/images/mineral-water.jpg" width="250px"><br><br>
+        <!--VIDEO-->
+        <div class="alert alert-info bg-secondary text-white text-center">
+            <strong>Video</strong>
+        </div>
 
-        <h2>Blogs</h2>
-        <a href="/bloglist">View Blogs</a><br>
-        <a href="/blogadd">Add New Blog</a><br>
-        <a href="/blogedit">Edit/Delete Blog</a><br><br>
+        <!--PODCAST-->
+        <div class="alert alert-info bg-secondary text-white text-center">
+            <strong>Podcast</strong>
+        </div>
 
-        <h2>Meal Preparation</h2>
-        <a href="/dietlist">View Meal Plans</a><br>
-        <a href="/dietadd">Add Meal Plan</a><br>
-        <a href="/dietedit">Edit/Delete Meal Plan</a><br><br>
+        <!--BLOG-->
+        <div class="alert alert-info bg-secondary text-white">
+            <strong><center>Blog</center></strong>
+        </div>
 
-        <h2>Videocast</h2>
-        <a href="/videolist">View Videocasts</a><br><br>
+        <div class="container">
+            <div>
+                <div class="row mb-2">
+                    <div class="col 3">
+                        <div class="text-secondary text-center">
+                            <h5><B>@blog.getBlogDesc</B></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <h2>Podcast</h2>
-        <a href="/podcastlist">View Podcasts</a><br><br>
+            <div>
+                <div class="row mb-2">
+                    <div class="col 3">
+                        <div class="<b>text-secondary<b>">
+                            <h5>@blog.getBlogBody</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!--<a class="btn btn-info" href="/bloglist">Return to List</a><br><br>--><!---->
-        <!--<a href="/homepage">Homepage</a>-->
+        <!--MEAL PREP-->
+        <div class="alert alert-info bg-secondary text-white text-center">
+            <strong>Meal Prep</strong>
+        </div>
+
+        <div class="container">
+            <div>
+                <div class="row mb-2">
+                    <div class="col 3">
+                        <div class="text-secondary text-center">
+                            <h5><B>@diet.getDietDesc</B></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row mb-2">
+                    <div class="col 3">
+                        <div class="<b>text-secondary<b>">
+                            <h5>@diet.getDietBody</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <div class="row mb-2">
+                    <div class="col 3">
+                        <div class="text-secondary text-center">
+                            <video width="320" height="240" controls>
+                                <source src="video.getVideoFile" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

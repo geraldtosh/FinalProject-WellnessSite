@@ -1,8 +1,10 @@
 package controllers;
 
 import models.Blog;
+import models.Diet;
 import models.Podcast;
 import models.Video;
+import play.Logger;
 import play.data.FormFactory;
 import play.db.jpa.JPAApi;
 import play.db.jpa.Transactional;
@@ -11,6 +13,7 @@ import play.mvc.Result;
 
 import javax.inject.Inject;
 import javax.persistence.TypedQuery;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomePageController extends Controller
@@ -25,9 +28,31 @@ public class HomePageController extends Controller
         this.formFactory = formFactory;
     }
 
+
+    @Transactional(readOnly = true)
     public Result getHomePage()
     {
-        return ok(views.html.homepage.render());
+        TypedQuery<Blog> query = db.em().createQuery("SELECT b FROM Blog b ORDER BY blogId DESC", Blog.class).setMaxResults(1);
+        List<Blog> blogs = query.getResultList();
+
+        Blog blog = blogs.get(0);
+
+
+        TypedQuery<Diet> dietquery = db.em().createQuery("SELECT d FROM Diet d ORDER BY prepId DESC", Diet.class).setMaxResults(1);
+        ;
+        List<Diet> diets = dietquery.getResultList();
+
+        Diet diet = diets.get(0);
+
+
+        TypedQuery<Video> videoquery = db.em().createQuery("SELECT v FROM Video v ORDER BY videoId DESC", Video.class).setMaxResults(1);
+        List<Video> videos = videoquery.getResultList();
+
+        Video video = videos.get(0);
+
+        Logger.debug("Length of vid: " + video.getVideoFile().length);
+
+        return ok(views.html.homepage.render(blog, diet, video));
     }
 
     @Transactional(readOnly = true)

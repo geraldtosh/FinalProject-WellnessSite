@@ -95,7 +95,7 @@ public class DietController extends Controller
         diet.setDietDesc(prepDesc);
         diet.setDietBody(prepBody);
 
-        return ok("saved");
+        return ok(views.html.dietedit.render(diet));
     }
 
     @Transactional

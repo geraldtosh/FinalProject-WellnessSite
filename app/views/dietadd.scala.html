@@ -12,32 +12,32 @@
     <body class="bg-light">
         <br>
         <div class="container">
-            <h2 class="text-info"><strong>Add Mealplan</strong></h2><br>
+            <h2 class="text-secondary"><strong>Add Mealplan</strong></h2><br>
             <form method="post" enctype="multipart/form-data">
                 @helper.CSRF.formField
 
-                <label  class="text-info"><B>Title</B></label><br>
-                <textarea name="prepname" rows="1" cols="30"></textarea>
+                <label  class="text-secondary"><B>Title</B></label><br>
+                <textarea name="prepname" class="border-secondary rounded" rows="1" cols="30"></textarea>
                 <br><br>
 
-                <label   class="text-info"><B>Description</B></label><br>
-                <textarea name="prepdesc" rows="2" cols="80"></textarea>
+                <label   class="text-secondary"><B>Description</B></label><br>
+                <textarea name="prepdesc" class="border-secondary rounded" rows="2" cols="80"></textarea>
                 <br><br>
 
-                <label   class="text-info"><B>Preparation</B></label><br>
-                <textarea name="prepbody" rows="8" cols="80"></textarea>
+                <label   class="text-secondary"><B>Preparation</B></label><br>
+                <textarea name="prepbody" class="border-secondary rounded" rows="8" cols="80"></textarea>
                 <br><br>
 
                 <table>
                     <tr>
                         <td>
-                            <input type="submit" value="Save" class="btn btn-sm bg-info  mr-3 text-white" href="/dietlist">
+                            <input type="submit" value="Save" class="btn btn-sm bg-secondary  mr-3 text-white" href="/dietlist">
                         </td>
                         <td>
-                            <a class="btn bg-info btn-sm mr-3 text-white" href="/dietlist">Back to Meals</a>
+                            <a class="btn bg-secondary btn-sm mr-3 text-white" href="/dietlist">Back to Meals</a>
                         </td>
                         <td>
-                            <a class="btn bg-info btn-sm mr-3 text-white" href="/homepage">Homepage</a>
+                            <a class="btn bg-secondary btn-sm mr-3 text-white" href="/homepage">Homepage</a>
                         </td>
                     </tr>
                 </table>

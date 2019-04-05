@@ -12,32 +12,32 @@
     <body class="bg-light">
         <div class="container">
             <br>
-            <h2 class="text-info"><strong>Add Blog</strong></h2><br>
+            <h2 class="text-secondary"><strong>Add Blog</strong></h2><br>
 
             <form method="post" enctype="multipart/form-data">
                 @helper.CSRF.formField
 
-                <label  class="text-info" type="text"><B>Title</B></label><br>
-                <textarea name="blogname" rows="1" cols="30"></textarea>
+                <label  class="text-secondary" type="text"><B>Title</B></label><br>
+                <textarea name="blogname" class="border-secondary rounded" rows="1" cols="30"></textarea>
                 <br><br>
 
-                <label  class="text-info" type="text"><B>Description</B></label><br>
-                <textarea name="blogdesc" rows="2" cols="80"></textarea>
+                <label  class="text-secondary"  type="text"><B>Description</B></label><br>
+                <textarea name="blogdesc" class="border-secondary rounded" rows="2" cols="80"></textarea>
                 <br><br>
 
-                <label  class="text-info" type=text"><B>Blog</B></label><br>
-                <textarea name="blogbody" rows="8" cols="80"></textarea>
+                <label  class="text-secondary"  type=text"><B>Blog</B></label><br>
+                <textarea name="blogbody" class="border-secondary rounded" rows="8" cols="80"></textarea>
                 <br><br>
                 <table>
                     <tr>
                         <td>
-                            <input class="btn bg-info btn-sm mr-3 text-white" type="submit" value="Save">
+                            <input class="btn bg-secondary btn-sm mr-3 text-white" type="submit" value="Save">
                         </td>
                         <td>
-                            <a class="btn  bg-info btn-sm mr-3 text-white" href="/bloglist">Back to Blogs</a>
+                            <a class="btn  bg-secondary btn-sm mr-3 text-white" href="/bloglist">Back to Blogs</a>
                         </td>
                         <td>
-                            <a class="btn  bg-info btn-sm text-white" href="/homepage mr-3">Homepage</a>
+                            <a class="btn  bg-secondary btn-sm text-white" href="/homepage mr-3">Homepage</a>
                         </td>
                     </tr>
                 </table>

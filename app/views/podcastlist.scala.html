@@ -12,14 +12,14 @@
     <body class="bg-light">
         <div class="container">
             <br>
-            <h1 class="text-info">Podcasts</h1>
+            <h1 class="text-secondary">Podcasts</h1>
             <br>
-            <table class="table table-striped">
+            <table class="table table-striped text-secondary">
                 <thead>
                     <tr>
-                        <th scope="col" class="text-white bg-info">Podcast Name</th>
-                        <th scope="col" class="text-white bg-info">Podcast Desc</th>
-                        <th scope="col" class="text-white bg-info">Action</th>
+                        <th scope="col" class="text-white bg-secondary">Podcast Name</th>
+                        <th scope="col" class="text-white bg-secondary">Podcast Desc</th>
+                        <th scope="col" class="text-white bg-secondary">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,14 +29,14 @@
                         <td>@podcast.getPodcastName</td>
                         <td>@podcast.getPodcastDesc</td>
                         <td>
-                            <a href="/podcastlisten/@podcast.getPodcastId"><u>View</u></a></td>
+                            <a href="/podcastlisten/@podcast.getPodcastId" class="text-dark"><u>View</u></a></td>
                         </td>
                     </tr>
                     }
                 </tbody>
 
             </table>
-            <a class="btn bg-info btn-sm text-white" href="/homepage">Homepage</a>
+            <a class="btn bg-secondary btn-sm text-white" href="/homepage">Homepage</a>
         </div>
     </body>
 </html>

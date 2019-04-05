@@ -1,5 +1,4 @@
 package controllers;
-
 import models.Blog;
 import play.data.DynamicForm;
 import play.data.FormFactory;
@@ -67,6 +66,8 @@ public class BlogController extends Controller
         TypedQuery<Blog> query = db.em().createQuery("SELECT b FROM Blog b ORDER BY blogId", Blog.class);
         List<Blog> blogs = query.getResultList();
 
+        blogs.get(0);
+
         return ok(views.html.bloglist.render(blogs));
     }
 
@@ -97,18 +98,19 @@ public class BlogController extends Controller
         blog.setBlogDesc(blogDesc);
         blog.setBlogBody(blogBody);
 
-        return ok(views.html.blogdisplay.render(blog));
+        return ok(views.html.blogedit.render(blog));
     }
 
     @Transactional
     public Result postBlogDelete(int blogId)
     {
-        TypedQuery<Blog> editQuery = db.em().createQuery("SELECT b FROM Blog b WHERE blogId = :blogId", Blog.class);
-        editQuery.setParameter("blogId", blogId);
-        Blog blog = editQuery.getSingleResult();
+        Blog blog = db.em().find(Blog.class, blogId);
         db.em().remove(blog);
 
-        return ok("DELETED");
+        TypedQuery<Blog> blogQuery=db.em().createQuery("SELECT b FROM Blog b", Blog.class);
+        List<Blog> blogs=blogQuery.getResultList();
+
+        return ok(views.html.bloglist.render(blogs));
     }
 
     @Transactional

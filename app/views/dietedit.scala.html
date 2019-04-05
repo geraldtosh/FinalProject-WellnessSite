@@ -13,31 +13,31 @@
     <body class="bg-light">
         <div class="container" >
             <br>
-            <h2 class="text-info"><strong>Edit Meal Plan</strong></h2>
+            <h2 class="text-secondary"><strong>Edit Meal Plan</strong></h2>
             <!--<h5>Now Editing:  @diet.getDietName</h5>-->
             <form method="post" enctype="multipart/form-data">
                 @helper.CSRF.formField
 
                 <img  src="/dietpicture/@diet.getPrepId" width="175px"><br><br>
 
-                <label  class="text-info"><B>Title</B></label><br>
-                <textarea name="prepname" rows="1" cols="40">@diet.getDietName</textarea>
+                <label  class="text-secondary"><B>Title</B></label><br>
+                <textarea name="prepname" class="border-secondary rounded" rows=1" cols="40">@diet.getDietName</textarea>
                 <br><br>
 
-                <label  class="text-info"><B>Description</B></label><br>
-                <textarea name="prepdesc" rows="2" cols="80">@diet.getDietDesc</textarea>
+                <label  class="text-secondary"><B>Description</B></label><br>
+                <textarea name="prepdesc" class="border-secondary rounded" rows="2" cols="80">@diet.getDietDesc</textarea>
                 <br><br>
 
-                <label  class="text-info"><B>Meal Preparation Plan</B></label><br>
-                <textarea name="prepbody" rows="10" cols="80">@diet.getDietBody</textarea>
+                <label  class="text-secondary"><B>Meal Preparation Plan</B></label><br>
+                <textarea name="prepbody" class="border-secondary rounded" rows="10" cols="80">@diet.getDietBody</textarea>
                 <br>
                 <table>
                     <tr>
                         <td>
-                            <input type="submit" value="Save" class="btn btn-sm mr-3 bg-info text-white" formmethod="post" formaction="/dietedit/@diet.getPrepId">
+                            <input type="submit" value="Save" class="btn btn-sm mr-3 bg-secondary text-white" formmethod="post" formaction="/dietedit/@diet.getPrepId">
                         </td>
                         <td>
-                            <input type="submit" value="Delete" class="btn btn-sm bg-info text-white  mr-3" formmethod="post" formaction="/dietdelete/@diet.getPrepId">
+                            <input type="submit" value="Delete" class="btn btn-sm bg-secondary text-white  mr-3" formmethod="post" formaction="/dietdelete/@diet.getPrepId">
                         </td>
                         <br>
                     </tr>
