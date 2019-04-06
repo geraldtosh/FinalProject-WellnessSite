@@ -7,7 +7,18 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
         <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/assets/stylesheets/body.css">
         <title>Blog Page</title>
+
+        <style>
+        pre{
+        display: block;
+        font-family: Calibri;
+        white-space: pre;
+        margin: 1em 0;
+        }
+        </style>
+
     </head>
     <body class="bg-light">
         <div class="container" >
@@ -19,7 +30,7 @@
 
             <h4 class="text-secondary"><strong>Title</strong></h4>
 
-            <textarea name="blogdesc" rows="2" cols="40" class="border-secondary rounded" >@blog.getBlogName</textarea>
+            <textarea name="blogname" rows="2" cols="40" class="border-secondary rounded" >@blog.getBlogName</textarea>
             <br><br>
 
             <h4 class="text-secondary"><strong>Description</strong></h4>
@@ -27,9 +38,9 @@
 
             <br><br>
 
-            <h4 class="text-secondary" ><strong>Blog</strong></h4>
 
-            <textarea name="blogdesc" class="border-secondary rounded" rows="10" cols="100">@blog.getBlogBody</textarea>
+            <h4 class="text-secondary" ><strong>Blog</strong></h4>
+            <textarea name="blogbody" class="border-secondary rounded" rows="10" cols="100">@blog.getBlogBody</textarea>
             <br><br>
 
             <a class="btn  bg-secondary text-white btn-sm mr-3 text-white"  href="/bloglist">Back to Blogs</a>
