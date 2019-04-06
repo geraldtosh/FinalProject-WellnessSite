@@ -39,7 +39,6 @@ public class HomePageController extends Controller
 
 
         TypedQuery<Diet> dietquery = db.em().createQuery("SELECT d FROM Diet d ORDER BY prepId DESC", Diet.class).setMaxResults(1);
-        ;
         List<Diet> diets = dietquery.getResultList();
 
         Diet diet = diets.get(0);
@@ -50,11 +49,17 @@ public class HomePageController extends Controller
 
         Video video = videos.get(0);
 
-        Logger.debug("Length of vid: " + video.getVideoFile().length);
 
-        return ok(views.html.homepage.render(blog, diet, video));
+        TypedQuery<Podcast> podcastquery = db.em().createQuery("SELECT p FROM Podcast p ORDER BY podCastId DESC", Podcast.class).setMaxResults(1);
+        List<Podcast> podcasts = podcastquery.getResultList();
+
+       Podcast podcast = podcasts.get(0);
+
+
+        return ok(views.html.homepage.render(blog, diet, video, podcast));
     }
 
+    //  Methods to return video
     @Transactional(readOnly = true)
     public Result getVideo(int videoId)
     {
@@ -77,14 +82,14 @@ public class HomePageController extends Controller
         return ok(views.html.videolist.render(videos));
     }
 
-    //  Methods to return podcast list
+    //  Methods to return podcast
     @Transactional(readOnly = true)
-    public Result getPodcast(int podcastId)
+    public Result getPodcast(int podCastId)
     {
-        String sql = "SELECT p FROM Podcast p WHERE podcastId = :podcastId";
+        String sql = "SELECT p FROM Podcast p WHERE podCastId = :podCastId";
 
         TypedQuery<Podcast> query = db.em().createQuery(sql, Podcast.class);
-        query.setParameter("podcastId", podcastId);
+        query.setParameter("podCastId", podCastId);
 
         Podcast podcast = query.getSingleResult();
 

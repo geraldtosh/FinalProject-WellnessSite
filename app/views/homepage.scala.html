@@ -1,8 +1,8 @@
-@(blog : Blog, diet : Diet, video : Video)
+@(blog : Blog, diet : Diet, video : Video, podcast : Podcast)
 @doctype.render
 @navbar.render
 
-<html lang="en">
+<div lang="en">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
@@ -10,11 +10,15 @@
         <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
         <title>Home Page</title>
     </head>
-    <body>
+
+    </body>
+    <div>
         <div class="container">
             <div class="page-header"></div>
-            <h1 class="text-secondary"><strong></strong><center>Rhonda's Health & Wellness Site</center></h1></strong></h1><br>
+            <h1 class="text-secondary text-center"><strong>Rhonda's Health & Wellness Site</strong></h1>
+                <br>
             </div>
+
             <div class="row">
                 <div class="col-12">
                     <div class="row">
@@ -25,7 +29,7 @@
             </div>
         </div>
 
-        <!--PICTURES-->
+        <!--PICTURES UNDER NAVBAR & Site Title-->
         <div class="row mb-4">
             <div class="col-2">
             </div>
@@ -41,17 +45,49 @@
 
         <!--VIDEO-->
         <div class="alert alert-info bg-secondary text-white text-center">
-            <strong>Video</strong>
+            <h4>Videocast</h4>
+        </div>
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col 3">
+                    <div class="text-secondary text-center">
+                        <video width="400" height="250" controls>
+                            <source src="/video/@video.getVideoId" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--PODCAST-->
         <div class="alert alert-info bg-secondary text-white text-center">
-            <strong>Podcast</strong>
+            <h4>Podcast</h4>
+        </div>
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-12">
+                    <div class="text-secondary text-center">
+                        <img  src="/assets/images/HangingApple.jpeg" width="400px" height="250px">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-12">
+                     <div class="text-secondary text-center">
+                            <video width="250" height="50" controls>
+                             <source src="/podcastlisten/@podcast.getPodcastId" type="audio/mp3">
+                         </video>
+                     </div>
+                </div>
+            </div>
         </div>
 
         <!--BLOG-->
-        <div class="alert alert-info bg-secondary text-white">
-            <strong><center>Blog</center></strong>
+        <div class="alert alert-info bg-secondary text-white text-center">
+            <h4>Blog</h4>
         </div>
 
         <div class="container">
@@ -68,8 +104,15 @@
             <div>
                 <div class="row mb-2">
                     <div class="col 3">
-                        <div class="<b>text-secondary<b>">
+                        <div class="text-secondary">
                             <h5>@blog.getBlogBody</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col 12">
+                        <div class="text-secondary text-center">
+                            <a href="/bloglist" class="text-center text-secondary"><u>See other blogs</u></a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +121,7 @@
 
         <!--MEAL PREP-->
         <div class="alert alert-info bg-secondary text-white text-center">
-            <strong>Meal Prep</strong>
+            <h4>Meal Plans</h4>
         </div>
 
         <div class="container">
@@ -93,26 +136,21 @@
             </div>
             <div>
                 <div class="row mb-2">
-                    <div class="col 3">
-                        <div class="<b>text-secondary<b>">
+                    <div class="col 12">
+                        <div class="text-secondary">
                             <h5>@diet.getDietBody</h5>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div>
                 <div class="row mb-2">
-                    <div class="col 3">
+                    <div class="col 12">
                         <div class="text-secondary text-center">
-                            <video width="320" height="240" controls>
-                                <source src="video.getVideoFile" type="video/mp4">
-                            </video>
+                            <a href="/dietlist" class="text-center text-secondary"><u>See other meal plans</u></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </body>
 </html>

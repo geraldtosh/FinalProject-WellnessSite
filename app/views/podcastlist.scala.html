@@ -25,11 +25,10 @@
                 <tbody>
                     @for( podcast <- podcasts){
                     <tr>
-                        <!--<td><a href="/podcastlisten/@podcast.getPodcastId">@podcast.getPodcastName</a></td>-->
                         <td>@podcast.getPodcastName</td>
                         <td>@podcast.getPodcastDesc</td>
                         <td>
-                            <a href="/podcastlisten/@podcast.getPodcastId" class="text-dark"><u>View</u></a></td>
+                            <a href="/podcastlisten/@podcast.getPodcastId" class="text-dark"><u>Listen</u></a></td>
                         </td>
                     </tr>
                     }
