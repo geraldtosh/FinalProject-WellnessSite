@@ -2,7 +2,7 @@
 @doctype.render
 @navbar.render
 
-<html lang="en">
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
@@ -16,47 +16,63 @@
 
     <body>
         <div>
-            <div class="row mb-3">
-
-                <div class="col-3 text-secondary text-dark ml-5">
+            <div class="row">
+                <div class="col-2 text-secondary text-dark ml-5 mr-5">
                     <br>
+                    <p><b>RHONDA TOSH</b></p>
                     <p>BS, MS Dietetics</p>
                     <p>Registered Dietitian (RD)</p>
                     <p>Certified Diabetes Educator (CDE)</p>
-                    <p>Board Certified - Advanced Diabetes Manager (BC-ADM)</p>
-                    <p>Certified LifeStyle Coach</p>
+                    <p>Board Certified-Advanced Diabetes Manager (BC-ADM)</p>
                     <p>Tobacco Treatment Specialist (TTS)</p>
+                    <p>Certified LifeStyle Coach</p>
                 </div>
 
-                <div class="col-2 text-center">
+                <div class="col-2 ml-5 text-center">
                 <br>
-                    <img src="/assets/images/rhondatvwithgirls.jpg" width="375px" height="225px" class="mr-5">
+                    <img src="/assets/images/rhondatvwithgirls.jpg" width="400px" height="250px">
                 </div>
 
-                <div class="col-1"></div>
+                <div class="col-1 ml-5"></div>
 
-                <div class="col-2 text-center">
+                <div class="col-2 mr-5 text-center">
                     <br>
-                    <img src="/assets/images/rhondatvwithman.jpg" width="375px" height="225px">
+                    <img src="/assets/images/rhondatvwithman.jpg" width="400px" height="250px">
                 </div>
                 <div class="col-1">
                 </div>
-                <div class="col-2">
+
+                <!--Links-->
+                <div class="col-2 text-secondary text-dark">
                     <br>
-                    <p>Appeared on: </p>
-                    <ul>
-                        <li>KARK</li>
-                        <li>KATV</li>
-                        <li>KTVN</li>
-                        <li>AETN</li>
-                    </ul>
+                    <p><b>LINKS</b></p>
+                    <div>
+                        <p>
+                            <a href="https://www.aetn.org/programs/arkansansask/diabetes/" class="text-secondary text-dark"><u>AETN - Experts Discuss Diabetes</u></a>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <a href="https://www.nutrition.gov/" class="text-secondary text-dark"><u>Nutrition.Gov</u></a>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <a href="https://nutrition.org/" class="text-secondary text-dark"><u>Nutrition.Org</u></a>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <a href="https://www.diabetes.org/diabetes-basics/" class="text-secondary text-dark"><u>American Diabetes Website</u></a>
+                        </p>
+                    </div>
                 </div>
-
-
-
-
             </div>
-
+            <div class="row mb-1">
+                <div class="col-12 text-center text-secondary text-dark">
+                    <p><em>Rhonda has appeared on television channels KARK, KATV, KTHV, and AETN</em></p>
+                </div>
+            </div>
 
             <!--Video-->
             <div class="bg-secondary text-white text-center">
@@ -107,14 +123,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-2">
-                    <div class="col 12">
-                        <div class="text-secondary text-center">
-                            <a href="/podcastlist" class="text-center text-secondary"><u>Other podcasts</u></a>
-                        </div>
-                        <br>
-                    </div>
-                </div>
             </div>
 
             <!--Blog-->
@@ -124,7 +132,7 @@
 
             <div class="container">
                 <div>
-                    <div class="row mb-2">
+                    <div class="row mb-1">
                         <div class="col 3">
                             <br>
                             <div class="text-secondary text-center">
@@ -134,14 +142,14 @@
                     </div>
                 </div>
                 <div>
-                    <div class="row mb-2">
-                        <div class="col 3">
+                    <div class="row mb-1">
+                        <div class="col 12">
                             <div class="text-secondary">
                                 <pre>@blog.getBlogBody</pre>
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-2">
+                    <div class="row mb-1">
                         <div class="col 12">
                             <div class="text-secondary text-center">
                                 <a href="/bloglist" class="text-center text-secondary"><u>Other blogs</u></a>
