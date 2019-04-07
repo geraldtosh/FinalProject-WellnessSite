@@ -15,143 +15,176 @@
     </head>
 
     <body>
-    <div>
-        <div class="container">
-            <div class="page-header"></div>
-            <h1 class="text-secondary text-center"><strong>Rhonda's Health & Wellness Site</strong></h1>
-            <br>
-        </div>
+        <div>
+            <div class="row mb-3">
 
-        <!--Pictures under Navbar/Site Title-->
-        <div class="row mb-4">
-            <div class="col-2"></div>
-            <div class="col-4 text-center">
-                <img  src="/assets/images/rhondatvwithgirls.jpg" width="375px" height="225px" class="mr-5"></div>
-            <div class="col-4 text-center">
-                <img  src="/assets/images/rhondatvwithman.jpg" width="375px" height="225px">
-            </div>
-            <div class="col-2"></div>
-        </div>
+                <div class="col-3 text-secondary text-dark ml-5">
+                    <br>
+                    <p>BS, MS Dietetics</p>
+                    <p>Registered Dietitian (RD)</p>
+                    <p>Certified Diabetes Educator (CDE)</p>
+                    <p>Board Certified - Advanced Diabetes Manager (BC-ADM)</p>
+                    <p>Certified LifeStyle Coach</p>
+                    <p>Tobacco Treatment Specialist (TTS)</p>
+                </div>
 
-        <!--Video-->
-        <div class="bg-secondary text-white text-center">
-            <h4><i>Videocast</i></h4>
-        </div>
-        <div class="container">
-            <div class="row mb-2">
-                <div class="col 3">
-                    <div class="text-secondary text-center">
-                        <video width="375" height="225" controls>
-                            <source src="/video/@video.getVideoId" type="video/mp4">
-                        </video>
-                    </div>
+                <div class="col-2 text-center">
+                <br>
+                    <img src="/assets/images/rhondatvwithgirls.jpg" width="375px" height="225px" class="mr-5">
                 </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col 12">
-                    <div class="text-secondary text-center">
-                        <a href="/videolist" class="text-center text-secondary"><u>Other videocasts</u></a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!--Podcast-->
-        <div class=" bg-secondary text-white text-center">
-            <h4><i>Podcast</i></h4>
-        </div>
-        <div class="container">
-            <div class="row mb-2">
-                <div class="col-12">
-                    <div class="text-secondary text-center">
-                        <img  src="/assets/images/HangingApple.jpeg" width="375px" height="225px">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row mb-1">
-                <div class="col-12">
-                    <div class="text-secondary text-center">
-                        <audio controls class="text-secondary text center">
-                             <source src="/podcastlisten/@podcast.getPodcastId" type="audio/mp3">
-                        </audio>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col 12">
-                    <div class="text-secondary text-center">
-                        <a href="/podcastlist" class="text-center text-secondary"><u>Other podcasts</u></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <div class="col-1"></div>
 
-        <!--Blog-->
-        <div class="bg-secondary text-white text-center">
-            <h4><i>Blog</i></h4>
-        </div>
+                <div class="col-2 text-center">
+                    <br>
+                    <img src="/assets/images/rhondatvwithman.jpg" width="375px" height="225px">
+                </div>
+                <div class="col-1">
+                </div>
+                <div class="col-2">
+                    <br>
+                    <p>Appeared on: </p>
+                    <ul>
+                        <li>KARK</li>
+                        <li>KATV</li>
+                        <li>KTVN</li>
+                        <li>AETN</li>
+                    </ul>
+                </div>
 
-        <div class="container">
-            <div>
+
+
+
+            </div>
+
+
+            <!--Video-->
+            <div class="bg-secondary text-white text-center">
+                <h4><i>Videocast</i></h4>
+            </div>
+            <div class="container">
                 <div class="row mb-2">
                     <div class="col 3">
                         <div class="text-secondary text-center">
-                            <h5><B>@blog.getBlogDesc</B></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="row mb-2">
-                    <div class="col 3">
-                        <div class="text-secondary">
-                            <pre>@blog.getBlogBody</pre>
+                            <br>
+                            <video width="375" height="225" controls>
+                                <source src="/video/@video.getVideoId" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col 12">
                         <div class="text-secondary text-center">
-                            <a href="/bloglist" class="text-center text-secondary"><u>Other blogs</u></a>
+                            <a href="/videolist" class="text-center text-secondary"><u>Other videocasts</u></a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <!--Podcast-->
+            <div class=" bg-secondary text-white text-center">
+                <h4><i>Podcast</i></h4>
+            </div>
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col-12">
+                        <br>
+                        <div class="text-secondary text-center">
+                            <img src="/assets/images/HangingApple.jpeg" width="375px" height="225px">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!--Meal Plan-->
-        <div class="bg-secondary text-white text-center ">
-            <h4><i>Meal Plan</i></h4>
-        </div>
-
-        <div class="container">
-            <div>
-                <div class="row">
+            <div class="container">
+                <div class="row mb-1">
                     <div class="col-12">
                         <div class="text-secondary text-center">
-                            <h5><B>@diet.getDietDesc</B></h5>
+                            <audio controls class="text-secondary text center">
+                                <source src="/podcastlisten/@podcast.getPodcastId" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col 12">
+                        <div class="text-secondary text-center">
+                            <a href="/podcastlist" class="text-center text-secondary"><u>Other podcasts</u></a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <!--Blog-->
+            <div class="bg-secondary text-white text-center">
+                <h4><i>Blog</i></h4>
+            </div>
+
+            <div class="container">
+                <div>
+                    <div class="row mb-2">
+                        <div class="col 3">
+                            <br>
+                            <div class="text-secondary text-center">
+                                <h5><B>@blog.getBlogDesc</B></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row mb-2">
+                        <div class="col 3">
+                            <div class="text-secondary">
+                                <pre>@blog.getBlogBody</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col 12">
+                            <div class="text-secondary text-center">
+                                <a href="/bloglist" class="text-center text-secondary"><u>Other blogs</u></a>
+                            </div>
+                            <br>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="row">
-                    <div class="col-12">
-                        <pre>@diet.getDietBody</pre>
+
+            <!--Meal Plan-->
+            <div class="bg-secondary text-white text-center ">
+                <h4><i>Meal Plan</i></h4>
+            </div>
+
+            <div class="container">
+                <div>
+                    <div class="row">
+                        <div class="col-12">
+                            <br>
+                            <div class="text-secondary text-center">
+                                <h5><B>@diet.getDietDesc</B></h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="text-secondary text-center">
-                            <a href="/dietlist" class="text-center text-secondary"><u>Other meal plans</u></a>
+                <div>
+                    <div class="row">
+                        <div class="col-12">
+                            <pre>@diet.getDietBody</pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-secondary text-center">
+                                <a href="/dietlist" class="text-center text-secondary"><u>Other meal plans</u></a>
+                            </div>
+                            <br>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </body>
 </html>
 
