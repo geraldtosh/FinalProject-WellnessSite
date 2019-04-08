@@ -7,7 +7,7 @@
 - Blog
 - Meal Preparation Plans
 - Podcasts
-- Videocast
+- Videocasts
 - Hyperlinks to nutritional sites
 
 
