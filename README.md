@@ -1,4 +1,4 @@
-# Final Project - Wellness Site
+# Final Project - Wellness & Nutrition Site
 
 ## This project creates a website providing wellness and nutrition information.  It contains media and functional capabilities
 
