@@ -1,14 +1,14 @@
 # Final Project - Wellness Site
 
-## This project creates a website containing information on nutrition and wellness, e.g., food, exercise, emotions, etc.
+## This project creates a website providing wellness and nutrition information.
 
 ## Features
 
 - Blog
-- Food Preparation Plans
-- Diet/Nutrition Plans (this may be in the 2nd release)
+- Meal Preparation Plans
 - Podcasts
-- Videos
-- Member List
+- Videocast
+- Hyperlinks to nutritional sites
+
 
 
